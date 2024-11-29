@@ -37,6 +37,12 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 alias v='nvim'
+alias fcc='cc -Wall -Wextra -Werror'
 
+alias ga='git add .'
+alias gc='git commit -m '${1}''
+alias gp='git push'
+
+alias kitty=~/.local/kitty.app/bin/kitty
 # Load Homebrew config script
 source $HOME/.brewconfig.zsh
