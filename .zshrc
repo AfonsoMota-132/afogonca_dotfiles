@@ -43,6 +43,8 @@ alias ga='git add .'
 alias gc='git commit -m '${1}''
 alias gp='git push'
 
+alias k='kitty & disown; exit'
+alias kt='kitty tmux & disown; exit'
 alias kitty=~/.local/kitty.app/bin/kitty
 # Load Homebrew config script
 source $HOME/.brewconfig.zsh
