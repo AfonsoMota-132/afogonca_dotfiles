@@ -1,0 +1,136 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+right_format = """[](fg:middle1)$time[](fg:middle1)"""
+
+continuation_prompt = '▶▶ '
+
+format = """
+[](fg:middle1)\
+$directory\
+[](fg:middle1 bg:middle2)\
+$git_branch\
+$git_status\
+$character
+"""
+
+add_newline = false
+
+#palette = 'rad'
+#palette = 'purple'
+#palette = 'vaporwave'
+#palette = 'retro'
+#palette = 'engine'
+#palette = 'retrorainbow'
+#palette = 'veryred'
+#palette = 'last_purple'
+#palette = 'gulf'
+#palette = 'phantom_thieves'
+# palette = 'rose-pine'
+palette = 'mine'
+
+[palettes.mine]
+middle1 = '#282a36'
+middle2 = '#3f4757'
+error = '#c4a7e7'
+text = '#bd93f9'
+
+[palettes.rose-pine]
+middle1 = '#3c89a9'
+middle2 = '#91c1c9'
+error = '#c4a7e7'
+text = '#ffffff'
+
+[palettes.phantom_thieves]
+middle1 = '#ff0505'
+middle2 = '#ffffff'
+error = '#732424'
+text = '#0d0d0d'
+
+[palettes.gulf]
+middle1 = '#93dafe'
+middle2 = '#ff7403'
+error = '#853b00'
+text = '#061240'
+
+[palettes.last_purple]
+middle1 = '#7A00B3'
+middle2 = '#9D00E5'
+error = '#ff00f7'
+text = '#FFFFFF'
+
+[palettes.veryred]
+middle1 = '#AA0000'
+middle2 = '#D5D5D5'
+error = '#FFDFD3'
+text = '#032323'
+
+[palettes.retrorainbow]
+middle1 = '#6688c3'
+middle2 = '#48a56a'
+error = '#FFDFD3'
+text = '#ffffff'
+
+[palettes.engine]
+middle1 = '#F1602C'
+middle2 = '#EC8922'
+error = '#FFDFD3'
+text = '#f5f5f5'
+
+[palettes.retro]
+middle1 = '#028391'
+middle2 = '#F85525'
+error = '#FFDFD3'
+text = '#f5f5f5'
+
+[palettes.vaporwave]
+middle1 = '#9600ff'
+middle2 = '#4900ff'
+error = '#FFDFD3'
+text = '#f5f5f5'
+
+[palettes.rad]
+middle1 = '#FFC300'
+middle2 = '#FF5733'
+error = '#FFDFD3'
+text = '#000000'
+
+[palettes.purple]
+middle1 = '#957DAD'
+middle2 = '#D291BC'
+error = '#FFDFD3'
+text = '#000000'
+
+[time]
+disabled = false
+format="[$time]($style)"
+time_format = '%T'
+style = "fg:text bg:middle1"
+
+[git_status]
+format = '[$all_status $ahead_behind]($style)'
+up_to_date = '✓'
+conflicted = '🏳'
+ahead = '⇑'
+behind = '⇓'
+diverged = '↰'
+untracked = ' 󰤔'
+stashed = ' 🮽'
+modified = ' ⚙'
+staged = '[++\($count\)](fg:text bg:middle2)'
+renamed = '✎'
+deleted = '🗑 '
+style = "fg:text bg:middle2"
+
+[git_branch]
+disabled = false
+format = '[ $branch ]($style)'
+style = 'fg:text bg:middle2'
+
+[character]
+success_symbol = '[](middle2)'
+error_symbol = '[](error)'
+
+[directory]
+format = '[  $path]($style)'
+style = 'fg:text bg:middle1'
+

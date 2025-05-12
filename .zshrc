@@ -24,9 +24,3 @@ source $HOME/.brewconfig.zsh
 #starship
 
 eval "$(starship init zsh)"
-
-if ! systemctl status docker | grep "running" &> /dev/null; then
-		echo "[Francinette] Starting Docker..."
-		sleep 1
-		exec "/bin/zsh"
-fi
