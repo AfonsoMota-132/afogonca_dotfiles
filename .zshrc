@@ -23,6 +23,7 @@ path=(
     $HOME/bin
     $HOME/bin/starship
     $HOME/.local/bin
+	$HOME/.cargo/bin
 )
 
 source $HOME/.brewconfig.zsh
