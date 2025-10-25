@@ -1,9 +1,19 @@
 return {
-  "sponkurtus2/angelic.nvim",
-  lazy = false,
-  priority = 1000,
-  config = function()
-    require("angelic").setup({})
-    vim.cmd.colorscheme("angelic")
-  end,
+    "sponkurtus2/angelic.nvim",
+    priority = 1000,
+    config = function()
+        require("angelic").setup({
+            transparent = false, -- Boolean: Sets the background to transparent
+            italics = {
+                comments = true, -- Boolean: Italicizes comments
+                keywords = true, -- Boolean: Italicizes keywords
+                functions = true, -- Boolean: Italicizes functions
+                strings = true, -- Boolean: Italicizes strings
+                variables = true, -- Boolean: Italicizes variables
+            },
+            overrides = {}, -- A dictionary of group names, can be a function returning a dictionary or a table.
+            palette_overrides = {},
+        })
+        vim.cmd.colorscheme("angelic")
+    end,
 }
